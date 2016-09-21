@@ -1,0 +1,6 @@
+In many cases it's not possible to modify existing mappings. Often the easiest work around for that is to create a new index with the desired mappings and re-index all of the data into the new index. 
+
+The second problem with adding the above mapping is that, even if we could add it, we would have limited our ability to search in the director field. That is, while a search for the exact value in the 
+field would match we wouldn't be able to search for single words in the field.
+
+Luckily, there's a simple solution to our problem. We add a mapping that upgrades the field to a multi field. What 
